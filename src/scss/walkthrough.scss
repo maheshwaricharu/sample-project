@@ -1,0 +1,194 @@
+.introjs-overlay{
+    opacity: 0 !important;
+}
+.introjs-disableInteraction{
+    opacity: 0 !important; 
+}
+
+.introjs-helperLayer *:before{
+    content: '';
+    position: fixed;
+    width: inherit;
+    height: inherit;
+    border-radius: 0.5em;
+    box-sizing: border-box;
+}
+.skipIcon{
+height: 25px;
+width: 25px;
+}
+
+.introjs-showheader{
+	z-index : 100000001 !important;
+}
+.introjs-helperLayer *:after{
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 1000;
+}
+.introjs-tooltip{
+	max-width: 416px !important;
+}
+
+.introjs-relativePosition{
+    box-sizing: border-box !important;
+    border: 4px solid var(--cup-general-color-1) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 4px 1px var(--cup-general-color-1) !important;
+}
+.walkthrough-helperLayer {
+	box-shadow: rgba(255,250,250, 0.89) 1000px 0px 1px 2px, rgba(255,250,250, 0.89) 100px 0px 0px 5000px !important;
+	border: 4px solid var(--cup-main-color-1)  !important; 
+	border-radius: 8px !important; 
+	box-sizing: border-box;
+}
+.introjs-tooltipReferenceLayer * {
+	font-family: 'Mulish', sans-serif;
+}
+.walkthrough-tooltip {
+	border-radius: 15px;
+	font-size: 14px;
+	width: 416px !important;
+	height: 220px !important;
+	background-color: var(--cup-general-color-1);
+	box-shadow: rgba(0,0,0,0.3) 0 0 25px -4px ;
+	min-width: 300px;
+	margin: 20px 0px;
+
+	@media (min-width: 768px) {
+		font-size: 16px;
+		min-width: 380px;
+	}
+	.introjs-helperNumberLayer {
+		display: flex;
+		flex-direction: column-reverse;
+		justify-content: center;
+		height:48px;
+   	    margin-top: -24px;
+		padding: 0;
+		position: relative;
+		top: 37px;
+		font-size: 14px;
+		
+	}
+	.introjs-tooltip-header {
+		padding: 16px 16px 0 16px;
+	}
+	.introjs-tooltiptext {
+		padding: 0px 16px;
+		.intro-top {
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			.description-container {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				text-align: center;
+				.description-heading {
+					height: 48px;
+					width: 344px;
+					color: var(--cup-general-color-5);
+					font-family: "Muli";
+					font-weight: 800;
+					font-size: 18px;
+					letter-spacing: 0;
+					line-height: 24px;
+					text-align: center;
+					margin-bottom: 8px;
+					
+					@media (min-width: 768px) {
+						font-size: 18px;
+					}
+				}
+				.description {
+					height: 52px;
+					width: 384px;
+					color: var(--cup-general-color-5);
+					font-family: Muli;
+					font-size: 16px;
+					letter-spacing: 0;
+					line-height: 24px;
+					text-align: center;
+					word-break: break-word;
+					margin: 0;
+					.highlight-text {
+						color: #FF9619;
+					}
+				}
+			}
+		}
+	}
+	.introjs-tooltipbuttons {
+		border: none;
+		margin-top: -10px;
+		padding: 0px !important;
+	}
+	.introjs-button {
+		box-sizing: border-box;
+		height: 48px;
+		width: 100px;
+		border: 2px solid var(--cup-main-color-1);
+		border-radius: 24px;
+		text-shadow: none;
+		font-size: 14px;
+		font-weight: 600;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		line-height: 16px;
+		text-align: center;
+		background-color: var(--cup-general-color-1);
+		color: var(--cup-main-color-1);
+		font-family: Muli;
+		box-sizing: border-box;
+		padding: 16px !important;
+		&:focus {
+			box-shadow: 0px 0px 2px 0px #007bff;
+		}
+	}
+	.introjs-skipbutton {
+		height: 12px;
+		width: 12px;
+		padding: 0px 10px 7px 10px !important;
+	}
+	.introjs-nextbutton {
+		padding: 15px 16px 15px 17px !important;
+		margin-right: 16px
+	}
+	.introjs-donebutton {
+		width: auto;
+	}
+	.introjs-prevbutton {
+		height: 16px;
+		width: 36px;
+		font-family: Muli;
+		font-size: 14px;
+		font-weight: bold;
+		letter-spacing: 0.5px;
+		line-height: 16px;
+		text-align: center;
+		border: none;
+		background: none;
+		color: var(--cup-main-color-1);
+		margin-left: 16px;
+	}
+	.introjs-prevbutton:hover,
+	.introjs-prevbutton:active,
+	.introjs-prevbutton:focus {
+		background: none;
+		border: none;
+		box-shadow: none;
+	}
+	.introjs-nextbutton:hover,
+	.introjs-nextbutton:active,
+	.introjs-nextbutton:focus,
+	.introjs-donebutton:hover,
+	.introjs-donebutton:active,
+	.introjs-donebutton:focus{
+		outline: none;
+	}
+}

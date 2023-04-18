@@ -1,0 +1,165 @@
+@import "../../../node_modules/libs-frontend-imgbook/dist/css/cup_v1_libs-frontend-imgbook.css";
+@import "../../../node_modules/libs-frontend-micro-base/scss/application";
+
+/* Plyr AUDIO/VIDEO wrapper styles */
+@import "../../../node_modules/plyr/dist/plyr.css";
+@import "../../libs/audio-video-wrapper/styles.scss";
+
+@import "../../../node_modules/bootstrap/scss/progress";
+
+
+html, body {
+    overflow: hidden;
+}
+
+.app-container {
+    margin-top: 0px;
+}
+
+.cookiesBannerVisible.app-container {
+    margin-top: 72px;
+    @media (min-width: 576px) {
+        margin-top: 40px;
+    }
+}
+
+#ee-overlaysA, #ee-overlaysB, #ee-overlays-cloneA, #ee-overlays-cloneB {
+    .customHotspotClass {
+        &.customVisibleClass {
+			z-index: 9;
+            touch-action: none;
+            user-select: none;
+            cursor: pointer !important;
+
+            transform: translate(-15%, -15%);
+            @media (min-width: 768px) {
+                transform: none;
+            }
+            div[type='page'], div[type='url'], div[type='note'] {
+                .hotSpotBox {
+                    img {
+                        border-radius: 4px !important;
+                        -webkit-box-shadow: none;
+                        -moz-box-shadow: none;
+                        box-shadow: none;
+                    }
+                }
+            }
+            .hotSpotBox {
+                width: 4.8em !important;
+                height: 4.8em !important;
+                img {
+                    width: 3.2em !important;
+                    height: 3.2em !important;
+                    -webkit-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.3);
+                    -moz-box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.3);
+                    box-shadow: 0px 0px 12px -1px rgba(0,0,0,0.3);
+                    border-radius: 50% !important;
+                    margin: 14% !important;
+                }
+                @media (min-width: 768px) {
+                    width: 3.2em !important;
+                    height: 3.2em !important;
+                    img {
+                        width: 100% !important;
+                        height: 100% !important;
+                        margin: 0 !important;
+                    }
+                }
+                .selected-icon {
+                    display: none;
+                }
+            }
+            &.customTouchDeviceClass {
+                transform: translate(-15%, -15%);
+                @media (min-width: 768px) {
+                    transform: translate(-15%, -15%);
+                }
+                .hotSpotBox {
+                    width: 4.8em !important;
+                    height: 4.8em !important;
+                    .img {
+                        width: 3.2em !important; 
+                        height: 3.2em !important;
+                        margin: 14% !important;
+                    }
+                    @media (min-width: 768px) {
+                        img {
+                            width: 3.2em !important; 
+                            height: 3.2em !important;
+                            margin: 14% !important;
+                        }
+                    }
+                }
+            }
+        }
+        &.animationClass {
+            &.customVisibleClass {
+                z-index: 9;
+                .hotSpotBox {
+                    width: calc(4.8em + 0.5em) !important;
+                    height: calc(4.8em + 0.5em) !important;
+                    @media (min-width: 768px) {
+                        width: calc(3.2em + 0.5em) !important;
+                        height: calc(3.2em + 0.5em) !important;
+                    }
+                }
+                &.customTouchDeviceClass {
+                    .hotSpotBox {
+
+                        width: calc(4.8em + 0.5em) !important;
+                        height: calc(4.8em + 0.5em) !important;
+                    }
+                }
+            }
+        }
+        &.transitionClass {
+            z-index: 9;
+            &.customVisibleClass {
+                .hotSpotBox {
+                    transition: width 0.25s, height 0.25s;
+                }
+                &.customTouchDeviceClass {
+                    .hotSpotBox {
+                    transition: width 0.25s, height 0.25s;
+                    }
+                }
+            }
+        }
+    }
+
+    .noteSelected {
+        .default-icon {
+            display: none !important;
+        }
+        .selected-icon {
+            display: block !important;
+        }
+    }
+
+    .dragEnabled {
+        .default-icon {
+            cursor: move !important;
+        }
+        .selected-icon {
+            cursor: move !important;
+        }
+    }
+}
+
+#ee-overlaysA, #ee-overlaysB {
+    .customHotspotClass {
+        &.customVisibleClass {
+            .hotSpotBox {
+                img {
+                    box-shadow: none !important;
+                }
+            }
+        }
+    }
+}
+
+.outer-container .ee-overlay.hide-hotspot-for-selectionbox,
+.outer-container .ee-overlay.hide-hotspot-for-offline {
+    display: none !important;
+}
